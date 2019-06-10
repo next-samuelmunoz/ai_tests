@@ -4,5 +4,5 @@ numpy==1.16.2
 scikit-learn==0.20.3
 scipy==1.2.1
 seaborn==0.9.0
-tf-nightly-2.0-preview==2.0.0.dev20190603
+tf-nightly-gpu-2.0-preview==2.0.0.dev20190603
 tqdm==4.32.1
