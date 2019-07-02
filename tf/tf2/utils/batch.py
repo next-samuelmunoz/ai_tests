@@ -57,7 +57,7 @@ def make_batches_random(x, y, batch_size, stop_after_epoch=False):
     PARAMETERS:
       x: np.array
         Samples
-      x: np.array or None
+      y: np.array or None
         Labels
       batch_size: int
       stop_after_epoch: bool
@@ -68,7 +68,7 @@ def make_batches_random(x, y, batch_size, stop_after_epoch=False):
       - The generator ends in an epoch.
       - It is NOT guaranteed to visit all the data.
     """
-    if y!=None:
+    if y is not None:
         assert(len(x)==len(y))
     if stop_after_epoch:
         batches = range(math.ceil(len(x)/batch_size))
@@ -79,5 +79,5 @@ def make_batches_random(x, y, batch_size, stop_after_epoch=False):
             yield (
                 i_batch,
                 np.take(x, indices, axis=0),
-                np.take(y, indices, axis=0) if y!=None else None
+                np.take(y, indices, axis=0) if y is not None else None
             )
